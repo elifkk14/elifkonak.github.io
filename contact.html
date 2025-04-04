@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Elif Konak</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    h1.section-title {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    h1.section-title::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background-color: var(--primary-color);
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+    }
+
+    form input, form textarea {
+      border-radius: 0.5rem;
+    }
+
+    form button {
+      background-color: var(--primary-color);
+      border: none;
+      transition: var(--transition);
+    }
+
+    form button:hover {
+      background-color: #5a52e0;
+    }
+
+    .contact-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      color: #4b45c6;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 pt-5">
+    <h1 class="section-title">Get in Touch</h1>
+
+    <p class="mb-4">If you want to collaborate, ask questions, or just say hello — feel free to reach out!</p>
+
+    <ul class="list-unstyled mb-4">
+      <li><i class="fas fa-envelope me-2"></i><strong>Email:</strong> <a href="mailto:elif.konak@yahoo.com.tr">elif.konak@yahoo.com.tr</a></li>
+      <li><i class="fab fa-linkedin me-2"></i><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/elif-konak-589064265" target="_blank">linkedin.com/in/elif-konak-589064265</a></li>
+      <li><i class="fab fa-github me-2"></i><strong>GitHub:</strong> <a href="https://github.com/elifkonak" target="_blank">github.com/elifkonak</a></li>
+    </ul>
+
+    <form class="mb-5">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary px-4">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Elif Konak. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Basit fade-in form animasyonu
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form');
+      form.style.opacity = 0;
+      setTimeout(() => {
+        form.style.transition = 'opacity 1s ease';
+        form.style.opacity = 1;
+      }, 400);
+    });
+  </script>
+</body>
+</html>

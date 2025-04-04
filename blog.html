@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Elif Konak</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --accent-color: #f50057;
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    h1.section-title {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    h1.section-title::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background-color: var(--primary-color);
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+    }
+
+    .blog-card {
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: var(--transition);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .blog-card .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-card .card-body {
+      padding: 1.5rem;
+    }
+
+    .blog-card .card-title {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .blog-card .card-subtitle {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-card .card-text {
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-card .card-link {
+      color: var(--primary-color);
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .blog-card .card-link:hover {
+      color: var(--accent-color);
+    }
+
+    .blog-categories {
+      margin-bottom: 2rem;
+    }
+
+    .category-btn {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 5px 15px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .category-btn:hover, .category-btn.active {
+      background-color: var(--primary-color);
+      color: #fff;
+      border-color: var(--primary-color);
+    }
+
+    .blog-search {
+      margin-bottom: 2rem;
+    }
+
+    .search-form {
+      position: relative;
+    }
+
+    .search-form input {
+      border-radius: 30px;
+      padding-left: 20px;
+      padding-right: 50px;
+      border: 1px solid #ddd;
+    }
+
+    .search-form button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+    }
+
+    .blog-featured {
+      margin-bottom: 3rem;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .blog-featured img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .blog-featured-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .blog-featured-content h2 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+
+    .social-icons a:hover {
+      color: rgba(255,255,255,0.8);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .blog-featured img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 pt-5">
+    <h1 class="section-title">My Blog</h1>
+    <p class="lead mb-4">Insights from my journey as a developer, student, and tech enthusiast.</p>
+
+    <!-- Featured Blog Post -->
+    <div class="blog-featured">
+      <img src="/api/placeholder/1200/400" alt="Featured blog post" />
+      <div class="blog-featured-content">
+        <span class="badge bg-light text-dark mb-2">Featured</span>
+        <h2>Building AI Solutions for Real-World Problems</h2>
+        <p>Exploring how computer science students can develop AI applications that address everyday challenges.</p>
+        <a href="#" class="btn btn-outline-light">Read Article</a>
+      </div>
+    </div>
+
+    <!-- Search & Categories -->
+    <div class="row">
+      <div class="col-md-6 blog-search">
+        <form class="search-form">
+          <input type="text" class="form-control" placeholder="Search articles...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <div class="col-md-6 d-flex justify-content-md-end blog-categories">
+        <div class="d-flex flex-wrap">
+          <button class="category-btn active">All</button>
+          <button class="category-btn">AI & ML</button>
+          <button class="category-btn">Web Dev</button>
+          <button class="category-btn">Student Life</button>
+          <button class="category-btn">Projects</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Posts -->
+    <div class="row g-4 mt-3">
+      <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="/api/placeholder/400/200" alt="Chatbot" class="card-img-top" />
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">AI & ML</span>
+            <h5 class="card-title">How I Built My First AI Chatbot</h5>
+            <h6 class="card-subtitle mb-2 text-muted">March 15, 2025</h6>
+            <p class="card-text">A brief walkthrough of building an intent-based chatbot using Python, NLP, and Keras. Challenges, solutions, and lessons learned.</p>
+            <a href="#" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="/api/placeholder/400/200" alt="Health app" class="card-img-top" />
+          <div class="card-body">
+            <span class="badge bg-success mb-2">Projects</span>
+            <h5 class="card-title">From Product Scanning to Health Insights</h5>
+            <h6 class="card-subtitle mb-2 text-muted">February 22, 2025</h6>
+            <p class="card-text">Behind the scenes of my product ingredient analysis app — scraping data, designing APIs, and why ethics in AI matters.</p>
+            <a href="#" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="/api/placeholder/400/200" alt="React components" class="card-img-top" />
+          <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">Web Dev</span>
+            <h5 class="card-title">React Component Patterns I Use Every Day</h5>
+            <h6 class="card-subtitle mb-2 text-muted">February 8, 2025</h6>
+            <p class="card-text">Sharing the component patterns and best practices that have significantly improved my React development workflow.</p>
+            <a href="#" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="/api/placeholder/400/200" alt="Code review" class="card-img-top" />
+          <div class="card-body">
+            <span class="badge bg-info text-dark mb-2">Student Life</span>
+            <h5 class="card-title">Peer Code Reviews: Lessons from University</h5>
+            <h6 class="card-subtitle mb-2 text-muted">January 29, 2025</h6>
+            <p class="card-text">How learning to review and accept feedback on my code made me a better programmer and collaborator.</p>
+            <a href="#" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="/api/placeholder/400/200" alt="Python data analysis" class="card-img-top" />
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">AI & ML</span>
+            <h5 class="card-title">Data Analysis Tricks with Python</h5>
+            <h6 class="card-subtitle mb-2 text-muted">January 12, 2025</h6>
+            <p class="card-text">Exploring lesser-known Python libraries and techniques that have transformed how I approach data analysis projects.</p>
+            <a href="#" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="/api/placeholder/400/200" alt="Hackathon team" class="card-img-top" />
+          <div class="card-body">
+            <span class="badge bg-danger mb-2">Student Life</span>
+            <h5 class="card-title">My First Hackathon: What I Would Do Differently</h5>
+            <h6 class="card-subtitle mb-2 text-muted">December 18, 2024</h6>
+            <p class="card-text">Reflections on teamwork, time management, and the importance of a good MVP after participating in my first 48-hour hackathon.</p>
+            <a href="#" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="card bg-light p-4 mt-5">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h3>Stay Updated</h3>
+          <p class="mb-lg-0">Subscribe to my newsletter for the latest articles, tutorials, and updates.</p>
+        </div>
+        <div class="col-lg-4">
+          <form class="d-flex">
+            <input type="email" class="form-control me-2" placeholder="Your email">
+            <button class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <nav class="mt-5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="text-center py-4 mt-5">
+    <div class="container">
+      <div class="social-icons mb-3">
+        <a href="https://github.com/elifkonak" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/elif-konak-589064265" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 Elif Konak. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Fade in animation
+      const content = document.querySelector('main');
+      content.style.opacity = 0;
+      setTimeout(() => {
+        content.style.transition = 'opacity 1s ease';
+        content.style.opacity = 1;
+      }, 300);
+      
+      // Category button functionality
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          // Here you would add filtering logic in a real implementation
+        });
+      });
+    });
+  </script>
+</body>
+</html>
