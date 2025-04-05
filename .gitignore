@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.env
+
+# VS Code
+.vscode/
+
+# System
+Thumbs.db
+Desktop.ini
+
+# Build
+dist/
+build/
+*.log
