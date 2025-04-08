@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First Hackathon: What I Would Do Differently | Elif Konak Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --accent-color: #f50057;
+      --transition: all 0.3s ease;
+    }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .navbar-brand { font-weight: bold; color: var(--primary-color); }
+    .nav-link:hover { color: var(--primary-color) !important; }
+    h1.section-title { font-weight: 700; font-size: 2rem; margin-bottom: 30px; position: relative; }
+    h1.section-title::after { content: ''; width: 50px; height: 4px; background-color: var(--primary-color); position: absolute; left: 0; bottom: -10px; }
+    footer { background-color: var(--primary-color); color: #fff; }
+    .social-icons a { color: #fff; margin: 0 10px; font-size: 1.2rem; transition: var(--transition); }
+    .social-icons a:hover { color: rgba(255,255,255,0.8); transform: translateY(-3px); }
+    .blog-post-content { line-height: 1.7; font-size: 1.1rem; color: #343a40;}
+    .blog-post-content h3 { margin-top: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--primary-color);}
+    .blog-post-meta span { margin-right: 15px; font-size: 0.9rem; color: #6c757d; }
+    .blog-post-meta .badge { font-size: 0.9rem; }
+    /* Include other styles from blog.html if needed */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 pt-5">
+    <article class="blog-post py-4">
+      <h1 class="section-title mb-4">My First Hackathon: What I Would Do Differently</h1>
+
+      <div class="blog-post-meta mb-4">
+        <span class="badge bg-danger me-2">Student Life</span>
+        <span class="text-muted"><i class="fas fa-calendar-alt me-1"></i> December 18, 2024</span>
+      </div>
+
+      <img src="images/hackathon.jpg" alt="Hackathon team working" class="img-fluid rounded mb-4 shadow-sm">
+
+      <div class="blog-post-content">
+        <p>My first 48-hour hackathon was a whirlwind of caffeine, code, and controlled chaos. We aimed high, worked tirelessly, and… well, we didn't win. But the experience was incredibly valuable, mostly for highlighting what I’d do differently next time.</p>
+
+        <h3>What Went Right:</h3>
+         <ul>
+            <li><strong>Team Enthusiasm:</strong> We had a great team dynamic, everyone was excited about the idea and willing to put in the effort.</li>
+            <li><strong>Learning on the Fly:</strong> I learned more about a new framework in those 48 hours than I had in weeks before. The pressure cooker environment forces rapid learning.</li>
+         </ul>
+
+
+        <h3>What I'd Change Next Time:</h3>
+        <ol>
+            <li><strong>Scope Management: The MVP Trap:</strong> Our biggest mistake was trying to build <em>everything</em>. We had grand visions for multiple complex features. Instead, we should have ruthlessly prioritized and focused solely on a <strong>Minimum Viable Product (MVP)</strong> – the absolute core functionality needed to demonstrate the concept. Get that working flawlessly first, <em>then</em> add bells and whistles if time allows. A polished, functional core is far more impressive than a half-finished collection of features.</li>
+            <li><strong>Time Management & Planning:</strong> We dove straight into coding without enough upfront planning. Next time, I'd allocate the first hour or two strictly for:
+                <ul>
+                    <li><strong>Defining Roles:</strong> Clearly assigning who is responsible for what (frontend, backend, API integration, presentation).</li>
+                    <li><strong>Task Breakdown:</strong> Breaking the MVP into small, manageable tasks.</li>
+                    <li><strong>Rough Timeline:</strong> Estimating how long each task might take and setting mini-deadlines. While things inevitably go off-track, having a plan provides direction and helps identify bottlenecks early. We lost valuable time debating approaches mid-stream.</li>
+                </ul>
+            </li>
+            <li><strong>Prioritize Sleep (Seriously!):</strong> Pulling an all-nighter (or two) feels hardcore, but diminishes returns fast. Coding while sleep-deprived leads to silly mistakes, debugging nightmares, and reduced problem-solving ability. Scheduling even short sleep breaks (e.g., 3-4 hours) would have likely resulted in <em>more</em> productive time overall.</li>
+            <li><strong>Preparation Beyond the Idea:</strong> We had a cool idea, but hadn't researched existing solutions thoroughly or prepared our tech stack setup beforehand. Spending a bit more time <em>before</em> the hackathon starts – setting up development environments, researching relevant libraries, and understanding the judging criteria – saves precious minutes (or hours) when the clock is ticking.</li>
+            <li><strong>Practice the Pitch:</strong> We scrambled to put together our final presentation in the last hour. Dedicating specific time to outlining the presentation, practicing the demo, and anticipating judges' questions is crucial. A great project can fall flat with a poor presentation.</li>
+        </ol>
+
+        <p>My first hackathon was an intense, exhausting, yet exhilarating experience. While we didn't achieve the outcome we hoped for, the lessons learned about teamwork, realistic scoping, time management, and the importance of a solid MVP were invaluable. I'm already looking forward to the next one, armed with these insights.</p>
+      </div>
+
+      <hr class="my-5">
+      <a href="blog.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-2"></i> Back to Blog</a>
+
+    </article>
+  </main>
+
+  <footer class="text-center py-4 mt-5">
+    <div class="container">
+      <div class="social-icons mb-3">
+        <a href="https://github.com/elifkonak" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/elif-konak-589064265" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 Elif Konak. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

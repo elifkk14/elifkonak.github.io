@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peer Code Reviews: Lessons from University | Elif Konak Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --accent-color: #f50057;
+      --transition: all 0.3s ease;
+    }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .navbar-brand { font-weight: bold; color: var(--primary-color); }
+    .nav-link:hover { color: var(--primary-color) !important; }
+    h1.section-title { font-weight: 700; font-size: 2rem; margin-bottom: 30px; position: relative; }
+    h1.section-title::after { content: ''; width: 50px; height: 4px; background-color: var(--primary-color); position: absolute; left: 0; bottom: -10px; }
+    footer { background-color: var(--primary-color); color: #fff; }
+    .social-icons a { color: #fff; margin: 0 10px; font-size: 1.2rem; transition: var(--transition); }
+    .social-icons a:hover { color: rgba(255,255,255,0.8); transform: translateY(-3px); }
+    .blog-post-content { line-height: 1.7; font-size: 1.1rem; color: #343a40;}
+    .blog-post-content h3 { margin-top: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--primary-color);}
+    .blog-post-meta span { margin-right: 15px; font-size: 0.9rem; color: #6c757d; }
+    .blog-post-meta .badge { font-size: 0.9rem; }
+    /* Include other styles from blog.html if needed */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 pt-5">
+    <article class="blog-post py-4">
+      <h1 class="section-title mb-4">Peer Code Reviews: Lessons from University</h1>
+
+      <div class="blog-post-meta mb-4">
+        <span class="badge bg-info text-dark me-2">Student Life</span>
+        <span class="text-muted"><i class="fas fa-calendar-alt me-1"></i> January 29, 2025</span>
+      </div>
+
+      <img src="images/code.jpg" alt="Code review discussion" class="img-fluid rounded mb-4 shadow-sm">
+
+      <div class="blog-post-content">
+        <p>University programming courses often introduce a practice that initially feels daunting but proves incredibly valuable: peer code review. Having classmates scrutinize your code, and doing the same for theirs, taught me more than just debugging; it shaped how I approach programming and collaboration.</p>
+
+        <h3>Initial Hesitation</h3>
+        <p>Let's be honest, sharing your freshly written code, flaws and all, can feel exposing. You worry about judgment or looking foolish. Similarly, critiquing a peer's work feels awkward – you don't want to offend or seem overly critical.</p>
+
+        <h3>The Breakthrough Benefits</h3>
+        <p>Despite the initial awkwardness, the benefits quickly became apparent:</p>
+        <ul>
+            <li><strong>Improved Code Quality:</strong> Peers often spot bugs, edge cases, or potential logic errors you missed simply because they have a fresh perspective. They might question unclear variable names or overly complex functions, leading to more robust and understandable code.</li>
+            <li><strong>Learning Different Approaches:</strong> Seeing how others tackle the same problem exposes you to new techniques, algorithms, or language features you might not have considered. It broadens your problem-solving toolkit.</li>
+            <li><strong>Enhanced Readability & Maintainability:</strong> When you know someone else has to understand your code, you naturally start writing it more clearly. This focus on readability is crucial for long-term maintainability, especially in team projects.</li>
+            <li><strong>Better Communication Skills:</strong> Learning to give constructive feedback (specific, actionable, and respectful) and receive criticism gracefully are vital soft skills. Code reviews provide a practical training ground for this. You learn to explain your design choices and understand others' perspectives.</li>
+            <li><strong>Shared Standards & Best Practices:</strong> Reviews help establish and enforce team or course coding standards, ensuring consistency across the project.</li>
+        </ul>
+
+        <h3>Making it Work</h3>
+        <ul>
+            <li><strong>Focus on Improvement, Not Blame:</strong> The goal is better code, not pointing fingers. Frame feedback constructively.</li>
+            <li><strong>Keep Reviews Focused:</strong> Reviewing smaller chunks of code (like individual features or bug fixes, often represented as Pull Requests in tools like Git) is more manageable and effective than reviewing massive changes.</li>
+            <li><strong>Use Checklists/Guidelines:</strong> Having a simple checklist (e.g., checking for comments, error handling, style guide adherence) can structure the review process.</li>
+            <li><strong>Leverage Tools:</strong> Platforms like GitHub, GitLab, or specialized review tools facilitate commenting directly on code lines and tracking changes.</li>
+        </ul>
+
+        <p>Peer code reviews in university weren't just about finding bugs; they were about building a collaborative mindset, improving communication, and collectively raising the quality of our work. It’s a practice I now consider essential in any software development context.</p>
+      </div>
+
+      <hr class="my-5">
+      <a href="blog.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-2"></i> Back to Blog</a>
+
+    </article>
+  </main>
+
+  <footer class="text-center py-4 mt-5">
+    <div class="container">
+      <div class="social-icons mb-3">
+        <a href="https://github.com/elifkonak" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/elif-konak-589064265" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 Elif Konak. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React Component Patterns I Use Every Day | Elif Konak Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --accent-color: #f50057;
+      --transition: all 0.3s ease;
+    }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .navbar-brand { font-weight: bold; color: var(--primary-color); }
+    .nav-link:hover { color: var(--primary-color) !important; }
+    h1.section-title { font-weight: 700; font-size: 2rem; margin-bottom: 30px; position: relative; }
+    h1.section-title::after { content: ''; width: 50px; height: 4px; background-color: var(--primary-color); position: absolute; left: 0; bottom: -10px; }
+    footer { background-color: var(--primary-color); color: #fff; }
+    .social-icons a { color: #fff; margin: 0 10px; font-size: 1.2rem; transition: var(--transition); }
+    .social-icons a:hover { color: rgba(255,255,255,0.8); transform: translateY(-3px); }
+    .blog-post-content { line-height: 1.7; font-size: 1.1rem; color: #343a40;}
+    .blog-post-content h3 { margin-top: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--primary-color);}
+    .blog-post-meta span { margin-right: 15px; font-size: 0.9rem; color: #6c757d; }
+    .blog-post-meta .badge { font-size: 0.9rem; }
+    /* Include other styles from blog.html if needed */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 pt-5">
+    <article class="blog-post py-4">
+      <h1 class="section-title mb-4">React Component Patterns I Use Every Day</h1>
+
+      <div class="blog-post-meta mb-4">
+        <span class="badge bg-warning text-dark me-2">Web Dev</span>
+        <span class="text-muted"><i class="fas fa-calendar-alt me-1"></i> February 8, 2025</span>
+      </div>
+
+      <img src="images/react.png" alt="React components code" class="img-fluid rounded mb-4 shadow-sm">
+
+      <div class="blog-post-content">
+        <p>React's component model is powerful, but as applications grow, managing state, reusing logic, and keeping components clean can become challenging. Over time, I've adopted several patterns that significantly streamline my workflow and make my code more maintainable and scalable. Here are a couple I find myself reaching for frequently:</p>
+
+        <h3>1. Higher-Order Components (HOCs)</h3>
+        <ul>
+          <li><strong>What they are:</strong> An HOC is a function that takes a component as input and returns a <em>new</em> component, usually wrapping the original one to add extra props or behavior. It's a pattern for reusing component logic.</li>
+          <li><strong>Why I use them:</strong> They are excellent for abstracting cross-cutting concerns – things that many components might need, but aren't core to their individual rendering logic. Think data fetching, authentication checks, logging, or connecting to a global state.</li>
+          <li><strong>Example Scenario (Conceptual):</strong> Imagine several components need to fetch data from an API. Instead of repeating the <code>fetch</code>, <code>loading</code> state, and <code>error</code> handling logic in each one, you can create a <code>withDataFetching(url)</code> HOC. This HOC handles the fetching logic internally and passes the <code>data</code>, <code>isLoading</code>, and <code>error</code> as props to the wrapped component. The original component stays simple, focusing only on displaying the data.</li>
+          <li><strong>Best Practices:</strong> Keep HOCs focused on a single concern. Be mindful of prop naming collisions. While powerful, hooks (like <code>useEffect</code>, <code>useState</code>, custom hooks) have replaced some older HOC use cases, but HOCs remain valuable for certain types of logic reuse and component augmentation.</li>
+        </ul>
+
+        <h3>2. Conditional Rendering</h3>
+        <ul>
+            <li><strong>What it is:</strong> Deciding <em>what</em> to render based on certain conditions (e.g., user login status, data availability, component state).</li>
+            <li><strong>Common Techniques:</strong>
+                <ul>
+                    <li><strong><code>if/else</code> statements:</strong> Good for complex conditional logic outside the JSX.</li>
+                    <li><strong>Ternary operator (<code>condition ? &lt;TrueComponent /&gt; : &lt;FalseComponent /&gt;</code>):</strong> Great for simple inline conditions within JSX.</li>
+                    <li><strong>Logical <code>&&</code> operator (<code>condition && &lt;Component /&gt;</code>):</strong> Useful for rendering something <em>only if</em> a condition is true.</li>
+                    <li><strong>Mapping to Components:</strong> Rendering lists dynamically based on data arrays using <code>.map()</code>.</li>
+                </ul>
+            </li>
+            <li><strong>Why it's crucial:</strong> It keeps the UI dynamic and responsive to the application's state. Mastering clear and concise conditional rendering prevents cluttered components and makes the UI logic easy to follow.</li>
+        </ul>
+
+        <h3>3. Custom Hooks</h3>
+         <ul>
+            <li><strong>What they are:</strong> Functions starting with <code>use</code> that let you extract component logic into reusable functions. Unlike HOCs or Render Props, hooks allow you to reuse <em>stateful</em> logic without changing your component hierarchy.</li>
+            <li><strong>Why I use them:</strong> Perfect for encapsulating logic that involves React state or lifecycle features (<code>useState</code>, <code>useEffect</code>, <code>useContext</code>) and needs to be shared between multiple components. Examples include fetching data (<code>useFetchData</code>), managing form state (<code>useFormInput</code>), or interacting with browser APIs (<code>useLocalStorage</code>).</li>
+            <li><strong>Benefit:</strong> They lead to cleaner components by separating concerns and improve testability.</li>
+         </ul>
+
+        <p><strong>General Best Practice:</strong> Keep components small and focused on a single responsibility. Whether using HOCs, hooks, or other patterns like Render Props or Compound Components, the goal is always to write cleaner, more reusable, and maintainable code. Start simple and introduce these patterns thoughtfully when they genuinely solve a problem of complexity or repetition.</p>
+      </div>
+
+      <hr class="my-5">
+      <a href="blog.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-2"></i> Back to Blog</a>
+
+    </article>
+  </main>
+
+  <footer class="text-center py-4 mt-5">
+    <div class="container">
+      <div class="social-icons mb-3">
+        <a href="https://github.com/elifkonak" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/elif-konak-589064265" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 Elif Konak. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
