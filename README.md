@@ -64,7 +64,7 @@ This website serves as:
 ## 📬 Contact
 
 📧 Email: elif.konak@yahoo.com.tr  
-💼 LinkedIn: [linkedin.com/in/elif-konak-589064265](https://linkedin.com/in/elif-konak-589064265)  
+💼 LinkedIn: [linkedin.com/in/elif-konak-589064265](https://linkedin.com/in/elif-konakk)  
 💻 GitHub: [github.com/elifkonak](https://github.com/elifkonak)
 
 ---
