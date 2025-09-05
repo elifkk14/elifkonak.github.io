@@ -4,74 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume | Elif Konak</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
-    :root {
-      --primary-color: #6c63ff;
-      --transition: all 0.3s ease;
-    }
-    
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-    }
-
-    .navbar-brand {
-      font-weight: bold;
-      color: var(--primary-color);
-    }
-
-    .nav-link:hover {
-      color: var(--primary-color) !important;
-    }
-
-    h1.section-title {
-      font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 30px;
-      position: relative;
-    }
-
-    h1.section-title::after {
-      content: '';
-      width: 50px;
-      height: 4px;
-      background-color: var(--primary-color);
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-    }
-
-    .resume-section h3 {
-      color: var(--primary-color);
-      margin-top: 2rem;
-    }
-
-    .resume-section ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    a.btn-primary {
-      background-color: var(--primary-color);
-      border: none;
-      transition: var(--transition);
-    }
-
-    a.btn-primary:hover {
-      background-color: #5a52e0;
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: #fff;
-    }
+    :root { --primary-color:#6c63ff; --dark:#2d2d2d; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#f8f9fa;color:var(--dark)}
+    .navbar-brand{font-weight:700;color:var(--primary-color)}
+    .nav-link:hover{color:var(--primary-color)!important}
+    .section-title{font-weight:800;font-size:2rem;margin-bottom:30px;position:relative}
+    .section-title::after{content:'';width:56px;height:4px;background:var(--primary-color);position:absolute;left:0;bottom:-10px;border-radius:2px}
+    .resume-card{background:#fff;border:1px solid #eee;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+    .resume-card h3{color:var(--primary-color);margin-top:.25rem}
+    .badge-tech{background:#f2f0ff;border:1px solid #e3e0ff;color:#3b2fbf;padding:.35rem .6rem;border-radius:999px;font-weight:600}
+    .btn-primary{background:var(--primary-color);border:none}
+    .btn-primary:hover{background:#5a52e0}
+    footer{background:var(--primary-color);color:#fff}
+    .meta{color:#6c757d}
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
+      <a class="navbar-brand" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -79,7 +33,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link active" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="resume.html" aria-current="page">Resume</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         </ul>
@@ -90,59 +44,179 @@
   <main class="container mt-5 pt-5">
     <h1 class="section-title">My Resume</h1>
 
-    <p>
-      <a href="Elif_Konak_Resume.pdf" target="_blank" class="btn btn-primary mb-3">
-        <i class="fas fa-file-download"></i> Download PDF
+    <p class="d-flex flex-wrap gap-2">
+      <a href="elif-konak-cv.pdf" target="_blank" class="btn btn-primary">
+        <i class="fa-solid fa-file-arrow-down me-1"></i> Download PDF
+      </a>
+      <a href="https://www.linkedin.com/in/elif-konakk" target="_blank" rel="noopener" class="btn btn-outline-secondary">
+        <i class="fa-brands fa-linkedin me-1"></i> LinkedIn
+      </a>
+      <a href="https://github.com/elifkk14" target="_blank" rel="noopener" class="btn btn-outline-secondary">
+        <i class="fa-brands fa-github me-1"></i> GitHub
+      </a>
+      <a href="https://elifkk14.github.io/elifkonak.github.io/" target="_blank" rel="noopener" class="btn btn-outline-secondary">
+        <i class="fa-solid fa-globe me-1"></i> Portfolio
       </a>
     </p>
+    <p class="meta mb-4">
+      <i class="fa-solid fa-location-dot me-1"></i> Ankara, Türkiye
 
-    <section class="resume-section">
-      <h3>Education</h3>
-      <ul>
-        <li><strong>TED University</strong> – BSc. in Computer Engineering (2022 - Present)</li>
-      </ul>
+      &nbsp;•&nbsp; <a href="mailto:elif.konak@yahoo.com.tr" class="text-decoration-none meta"><i class="fa-solid fa-envelope me-1"></i> elif.konak@yahoo.com.tr</a>
+    </p>
 
-      <h3>Skills</h3>
-      <ul>
-        <li><strong>Languages:</strong> Java, Python, C, SQL</li>
-        <li><strong>Web:</strong> HTML5, CSS3, Bootstrap, JavaScript, React</li>
-        <li><strong>Backend:</strong> FastAPI, Flask</li>
-        <li><strong>Tools:</strong> Git, GitHub, Postman, Linux</li>
-      </ul>
-
-      <h3>Languages</h3>
-      <ul>
-        <li>Turkish – Native</li>
-        <li>English – Advanced (Academic + Technical)</li>
-        <li>French – Advanced (Academic + Technical)</li>
-      </ul>
-
-      <h3>Find me on</h3>
-      <p>
-        <a href="https://linkedin.com/in/elif-konak-589064265" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        &nbsp; | &nbsp;
-        <a href="https://github.com/elifkonak" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
+    <!-- Summary -->
+    <section class="resume-card p-4 mb-4">
+      <h3 class="h5 mb-2"><i class="fa-solid fa-user-astronaut me-2"></i>Summary</h3>
+      <p class="mb-0">
+        Computer Engineering senior focused on backend/platform engineering. Designed and deployed Java/Spring services and a PostgreSQL HA cluster on Kubernetes; implemented JSON logging, zero-touch scaling, and &lt;30s leader election via ProxySQL. Passionate about distributed systems, clean APIs, and performance.
       </p>
     </section>
+
+    <!-- Experience & Education -->
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <section class="resume-card p-4 h-100">
+          <h3 class="h5 mb-3"><i class="fa-solid fa-briefcase me-2"></i>Experience</h3>
+          <ul class="mb-0">
+            <li class="mb-3">
+              <strong>BiSoft</strong> — DevOps / SRE Intern
+              <div class="meta">Apr 2025 – Sep 2025 · Ankara, Türkiye</div>
+              <ul class="mt-1">
+                <li>Containerized BFM &amp; MiniPG; built combined Docker images with PostgreSQL 16.</li>
+                <li>On Kubernetes (Minikube): headless services, StatefulSets, ConfigMaps, RBAC; dynamic node discovery.</li>
+                <li>Automated ProxySQL hostgroup discovery &amp; failover; replaced VIP routing and reduced RTO.</li>
+                <li>Developed pod-lister JAR + scripts enabling zero-touch scaling and discovery.</li>
+                <li>Created Sphinx docs and Draw.io network diagrams.</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="col-lg-6">
+        <section class="resume-card p-4 h-100">
+          <h3 class="h5 mb-3"><i class="fa-solid fa-graduation-cap me-2"></i>Education</h3>
+          <ul class="mb-0">
+            <li class="mb-3">
+              <strong>TED University</strong> — B.Sc. in Computer Engineering
+              <div class="meta">2022 – 2026 (expected) · Ankara, Türkiye</div>
+              <div class="mt-1">
+                <span class="badge-tech me-1">Data Structures & Algorithms</span>
+                <span class="badge-tech me-1">Operating Systems</span>
+                <span class="badge-tech me-1">Computer Networks</span>
+                <span class="badge-tech me-1">AI & Software Eng.</span>
+              </div>
+            </li>
+            <li class="mb-0">
+              <strong>Tevfik Fikret High School</strong> — French Baccalaureate (Science)
+              <div class="meta">2018 – 2022 · Medium of instruction: French</div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <section class="resume-card p-4 my-4">
+      <h3 class="h5 mb-3"><i class="fa-solid fa-screwdriver-wrench me-2"></i>Skills</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="mb-0">
+            <li><strong>Languages:</strong> Java (21), Python, C, JavaScript/TypeScript, SQL</li>
+            <li><strong>Backend:</strong> Spring Boot 3, FastAPI, Flask, Node.js (Express)</li>
+            <li><strong>Web/Frontend:</strong> React, Next.js, TailwindCSS, Bootstrap</li>
+            <li><strong>Data:</strong> PostgreSQL (replication, slots, WAL, tuning), MongoDB, MySQL</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="mb-0">
+            <li><strong>DevOps:</strong> Docker, Docker Compose, Kubernetes (Minikube), GitHub Actions</li>
+            <li><strong>Infra/Tools:</strong> Linux, Bash, Nginx, ProxySQL, Maven, Lombok, Postman</li>
+            <li><strong>ML & Prototyping:</strong> scikit-learn, Keras, NLP basics, Python scripting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="resume-card p-4 my-4">
+      <h3 class="h5 mb-3"><i class="fa-solid fa-diagram-project me-2"></i>Selected Projects</h3>
+      <ul class="mb-0">
+        <li class="mb-2">
+          <strong>Product Analysis AI</strong> — Ingredient safety checker with rationale cards (Next.js + FastAPI).
+          <a href="https://github.com/elifkk14/product-analysis-ai" target="_blank" rel="noopener" class="ms-1">GitHub</a>
+        </li>
+        <li class="mb-2">
+          <strong>Study Space Finder App</strong> — Flutter app to find quiet places to study (Firebase, HERE Maps).
+          <a href="https://github.com/elifkk14/flutter_coffee_shop_app" target="_blank" rel="noopener" class="ms-1">GitHub</a>
+        </li>
+        <li class="mb-2">
+          <strong>Gatherly</strong> — Discord-like real-time web app (Socket.io, WebRTC, React, Node.js). <a href="gatherly.html" class="ms-1">Details</a>
+        </li>
+        <li class="mb-2">
+          <strong>Spades Multiplayer Game</strong> — Real-time Batak with rooms, bidding, trump logic, turn engine.
+          <a href="https://github.com/elifkonak/spades-server" target="_blank" rel="noopener" class="ms-1">GitHub</a>
+        </li>
+        <li class="mb-0">
+          <strong>Asteroid Hunter</strong> — Java arcade game with waves, upgrades, scoring and animations.
+          <a href="https://github.com/elifkonak/AsteroidHunter" target="_blank" rel="noopener" class="ms-1">GitHub</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Certifications & Publications & Awards -->
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <section class="resume-card p-4 h-100">
+          <h3 class="h5 mb-3"><i class="fa-solid fa-certificate me-2"></i>Certifications</h3>
+          <ul class="mb-0">
+            <li><strong>Docker Essentials</strong> — IBM Skills Network (Sep 2025)</li>
+            <li><strong>Kubernetes in Google Cloud</strong> — Google Cloud Skills Boost (Sep 2025)</li>
+            <li><strong>Introduction to Linux (LFS101)</strong> — Linux Foundation (Sep 2025)</li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-lg-6">
+        <section class="resume-card p-4 h-100">
+          <h3 class="h5 mb-3"><i class="fa-solid fa-newspaper me-2"></i>Publications</h3>
+          <ul class="mb-3">
+            <li>
+              <strong>“BFM Mimarisi Artık Daha Akıllı: ProxySQL Entegrasyonu”</strong> — Medium (Aug 20, 2025).
+              <a href="https://medium.com/@elif.konakk/bfm-mimarisi-art%C4%B1k-daha-ak%C4%B1ll%C4%B1-proxysql-entegrasyonu-f3fa646df6c2" target="_blank" rel="noopener" class="ms-1">Read</a>
+            </li>
+          </ul>
+          <h3 class="h6 mb-2"><i class="fa-solid fa-trophy me-2"></i>Awards</h3>
+          <ul class="mb-0">
+            <li>Dean’s Honor List — TED University (2022–2025)</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <section class="resume-card p-4 my-4">
+      <h3 class="h5 mb-3"><i class="fa-solid fa-language me-2"></i>Languages</h3>
+      <ul class="mb-0">
+        <li>Turkish — Native</li>
+        <li>English — Upper-Intermediate (B2)</li>
+        <li>French — Upper-Intermediate (B2)</li>
+        <li>Italian — Elementary (A1)</li>
+      </ul>
+    </section>
+
+    <p class="meta mt-3">Last updated: Sep 2025</p>
   </main>
 
   <footer class="text-center py-3 mt-5">
     <p class="mb-0">&copy; 2025 Elif Konak. All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const content = document.querySelector('main');
-      content.style.opacity = 0;
-      setTimeout(() => {
-        content.style.transition = 'opacity 1s ease';
-        content.style.opacity = 1;
-      }, 300);
+      const main = document.querySelector('main');
+      main.style.opacity = 0;
+      setTimeout(()=>{ main.style.transition='opacity 800ms ease'; main.style.opacity=1; }, 200);
     });
   </script>
 </body>
