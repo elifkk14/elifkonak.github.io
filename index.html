@@ -3,261 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elif Konak | Computer Engineer/ Software Developer</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Elif Konak | Computer Engineer / Software Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
-    :root {
-      --primary-color: #6c63ff;
-      --secondary-color: #f50057;
-      --dark-color: #2d2d2d;
-      --light-color: #f8f9fa;
-      --transition: all 0.3s ease;
+    :root{
+      --primary-color:#6c63ff;
+      --secondary-color:#f50057;
+      --dark-color:#2d2d2d;
+      --light-color:#f8f9fa;
+      --transition:all .3s ease
     }
-    
-    body {
-      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      color: var(--dark-color);
-      overflow-x: hidden;
-    }
-    
-    .navbar {
-      padding: 15px 0;
-      transition: var(--transition);
-    }
-    
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-    }
-    
-    .nav-link {
-      font-weight: 500;
-      margin: 0 10px;
-      position: relative;
-      transition: var(--transition);
-    }
-    
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: var(--primary-color);
-      transition: var(--transition);
-    }
-    
-    .nav-link:hover::after {
-      width: 100%;
-    }
-    
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080') center/cover;
-      overflow: hidden;
-    }
-    
-    .hero-content {
-      z-index: 1;
-      padding: 150px 0;
-    }
-    
-    .animated-text {
-      font-size: 1.5rem;
-      overflow: hidden;
-      display: inline-block;
-      position: relative;
-    }
-    
-    .animated-text::after {
-      content: '|';
-      position: absolute;
-      right: -5px;
-      animation: blink 0.8s infinite;
-    }
-    
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    
-    .btn-custom {
-      background-color: var(--primary-color);
-      border: none;
-      padding: 12px 30px;
-      border-radius: 50px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
-      transition: var(--transition);
-    }
-    
-    .btn-custom:hover {
-      background-color: #5a52e0;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(108, 99, 255, 0.6);
-    }
-    
-    .btn-outline-custom {
-      border: 2px solid var(--primary-color);
-      color: var(--primary-color);
-      background: transparent;
-      padding: 11px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: var(--transition);
-      margin-left: 15px;
-    }
-    
-    .btn-outline-custom:hover {
-      background-color: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-    }
-    
-    .section-title {
-      position: relative;
-      margin-bottom: 40px;
-      font-weight: 700;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-      width: 50px;
-      height: 3px;
-      background-color: var(--primary-color);
-    }
-    
-    .tech-icon {
-      display: inline-flex;
-      align-items: center;
-      background-color: rgba(108, 99, 255, 0.1);
-      padding: 8px 16px;
-      border-radius: 50px;
-      margin: 5px;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-    
-    .tech-icon:hover {
-      background-color: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-    }
-    
-    .about-img {
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: var(--transition);
-    }
-    
-    .about-img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    .social-icons a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: var(--light-color);
-      color: var(--primary-color);
-      margin: 0 5px;
-      font-size: 1.2rem;
-      transition: var(--transition);
-      text-decoration: none;
-    }
-    
-    .social-icons a:hover {
-      background-color: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-    }
-    
-    footer {
-      background-color: var(--dark-color);
-      color: white;
-      padding: 30px 0;
-    }
-    
-    .footer-link {
-      color: rgba(255, 255, 255, 0.7);
-      transition: var(--transition);
-      text-decoration: none;
-    }
-    
-    .footer-link:hover {
-      color: white;
-    }
-    
-    /* Stats counter */
-    .counter-box {
-      text-align: center;
-      padding: 20px 10px;
-      border-radius: 10px;
-      background-color: white;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: var(--transition);
-    }
-    
-    .counter-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    }
-    
-    .counter-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 5px;
-    }
-    
-    .counter-text {
-      font-weight: 500;
-      color: var(--dark-color);
-    }
-    
-    /* Background patterns */
-    .bg-pattern {
-      position: absolute;
-      opacity: 0.05;
-      z-index: 0;
-    }
-    
-    .pattern-top-right {
-      top: -100px;
-      right: -100px;
-      transform: rotate(30deg);
-    }
-    
-    .pattern-bottom-left {
-      bottom: -100px;
-      left: -100px;
-      transform: rotate(-30deg);
-    }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--dark-color);overflow-x:hidden}
+    .navbar{padding:15px 0;transition:var(--transition)}
+    .navbar-brand{font-size:1.5rem;font-weight:700;color:var(--primary-color)}
+    .nav-link{font-weight:500;margin:0 10px;position:relative;transition:var(--transition)}
+    .nav-link::after{content:'';position:absolute;width:0;height:2px;bottom:0;left:0;background:var(--primary-color);transition:var(--transition)}
+    .nav-link:hover::after{width:100%}
+    /* HERO */
+    .hero{min-height:100vh;position:relative;background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)), url('images/hero.jpg') center/cover no-repeat;overflow:hidden}
+    .hero-content{z-index:1;padding:140px 0}
+    .animated-text{font-size:1.5rem;overflow:hidden;display:inline-block;position:relative;color:#fff}
+    .animated-text::after{content:'|';position:absolute;right:-5px;animation:blink .8s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    .btn-custom{background:var(--primary-color);border:none;padding:12px 30px;border-radius:50px;font-weight:600;box-shadow:0 4px 15px rgba(108,99,255,.4);transition:var(--transition)}
+    .btn-custom:hover{background:#5a52e0;transform:translateY(-3px);box-shadow:0 6px 20px rgba(108,99,255,.6)}
+    .btn-outline-custom{border:2px solid var(--primary-color);color:var(--primary-color);background:transparent;padding:11px 28px;border-radius:50px;font-weight:600;transition:var(--transition);margin-left:15px}
+    .btn-outline-custom:hover{background:var(--primary-color);color:#fff;transform:translateY(-3px)}
+    .section-title{position:relative;margin-bottom:40px;font-weight:700}
+    .section-title::after{content:'';position:absolute;left:0;bottom:-10px;width:56px;height:3px;background:var(--primary-color)}
+    .tech-icon{display:inline-flex;align-items:center;background:rgba(108,99,255,.1);padding:8px 16px;border-radius:999px;margin:5px;font-weight:600;transition:var(--transition)}
+    .tech-icon i{margin-right:.5rem}
+    .tech-icon:hover{background:var(--primary-color);color:#fff;transform:translateY(-3px)}
+    .about-img{border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.1);transition:var(--transition)}
+    .about-img:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.15)}
+    .social-icons a{display:inline-flex;justify-content:center;align-items:center;width:40px;height:40px;border-radius:50%;background:var(--light-color);color:var(--primary-color);margin:0 5px;font-size:1.1rem;transition:var(--transition);text-decoration:none}
+    .social-icons a:hover{background:var(--primary-color);color:#fff;transform:translateY(-3px)}
+    footer{background:#2d2d2d;color:#fff;padding:30px 0}
+    .footer-link{color:rgba(255,255,255,.75);transition:var(--transition);text-decoration:none}
+    .footer-link:hover{color:#fff}
+    /* Stats */
+    .counter-box{text-align:center;padding:20px 10px;border-radius:10px;background:#fff;box-shadow:0 5px 15px rgba(0,0,0,.05);transition:var(--transition)}
+    .counter-box:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,.1)}
+    .counter-number{font-size:2.5rem;font-weight:800;color:var(--primary-color);margin-bottom:6px}
+    .counter-text{font-weight:600;color:var(--dark-color)}
+    /* Subtle white shapes */
+    .bg-pattern{position:absolute;opacity:.05;z-index:0}
+    .pattern-top-right{top:-100px;right:-100px;transform:rotate(30deg)}
+    .pattern-bottom-left{bottom:-100px;left:-100px;transform:rotate(-30deg)}
   </style>
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- NAV -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Elif<span style="color: var(--secondary-color)">.</span>Konak</a>
+      <a class="navbar-brand" href="index.html">Elif<span style="color:var(--secondary-color)">.</span>Konak</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -267,66 +74,63 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <header class="hero d-flex align-items-center">
     <div class="bg-pattern pattern-top-right">
-      <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-        <g fill="#ffffff" fill-rule="nonzero">
-          <path d="M300 0 L600 300 L300 600 L0 300 Z" />
-        </g>
-      </svg>
+      <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="#ffffff" fill-rule="nonzero"><path d="M300 0 L600 300 L300 600 L0 300 Z"/></g></svg>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 hero-content text-lg-start text-center">
-          <h1 class="display-3 fw-bold text-white mb-3">Hi, I'm <span style="color: var(--primary-color)">Elif Konak</span></h1>
-          <div class="animated-text lead text-white mb-4">Computer Engineering Student | Software Developer | AI Enthusiast</div>
-          <p class="lead text-white-50 mb-5">I build innovative digital solutions and explore the fascinating world of technology.</p>
+          <h1 class="display-3 fw-bold text-white mb-3">Hi, I'm <span style="color:var(--primary-color)">Elif Konak</span></h1>
+          <div class="animated-text mb-3">Computer Engineering Student</div>
+          <p class="lead text-white-50 mb-5">
+            Senior Computer Engineering student at TED University. I build backend & real-time web applications,
+            containerize services, and automate delivery with CI/CD.
+          </p>
           <div class="d-flex flex-wrap justify-content-lg-start justify-content-center">
-            <a href="projects.html" class="btn btn-custom mb-2 mb-md-0">View My Projects</a>
-            <a href="resume.html" class="btn btn-outline-custom">Download CV</a>
+            <a href="projects.html" class="btn btn-custom mb-2 mb-md-0"><i class="fa-solid fa-diagram-project me-2"></i>View My Projects</a>
+            <a href="elif-konak-cv.pdf" class="btn btn-outline-custom"><i class="fa-solid fa-file-arrow-down me-2"></i>Download CV</a>
+          </div>
+          <div class="mt-3">
+            <a href="https://www.linkedin.com/in/elif-konakk" class="text-decoration-none me-3 text-white-50"><i class="fa-brands fa-linkedin me-1"></i> LinkedIn</a>
+            <a href="https://github.com/elifkk14" class="text-decoration-none text-white-50"><i class="fa-brands fa-github me-1"></i> GitHub</a>
           </div>
         </div>
       </div>
     </div>
     <div class="bg-pattern pattern-bottom-left">
-      <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-        <g fill="#ffffff" fill-rule="nonzero">
-          <circle cx="300" cy="300" r="300" />
-        </g>
-      </svg>
+      <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="#ffffff" fill-rule="nonzero"><circle cx="300" cy="300" r="300"/></g></svg>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="py-5 py-lg-7 position-relative">
+  <!-- ABOUT -->
+  <section id="about" class="py-5 position-relative">
     <div class="container py-4">
       <div class="row align-items-center">
         <div class="col-lg-5 mb-4 mb-lg-0">
-          <img src="images/profile.png" alt="Elif Konak" class="img-fluid about-img w-100">
+          <img src="images/profile.png" alt="Portrait of Elif Konak" class="img-fluid about-img w-100">
         </div>
         <div class="col-lg-7">
           <h2 class="section-title">About Me</h2>
-          <p class="lead mb-4">Passionate about technology and innovation.</p>
-          <p>I am a dedicated 3rd-year Computer Engineering student at TED University with a passion for solving complex problems through code. My journey in technology has led me to explore diverse areas including software development, artificial intelligence, cybersecurity, and data science.</p>
-          <p>Beyond the classroom, I actively contribute to open-source projects and continuously expand my skills in modern programming languages and frameworks. I believe in creating technology that makes a positive impact and simplifies everyday challenges.</p>
-          
+          <p class="lead mb-3">Backend-leaning developer with a growing focus on DevOps & cloud-native.</p>
+          <p>I enjoy designing clean APIs, building real-time features (Socket.io/WebRTC), and running services in containers.
+             Recently I worked on a PostgreSQL high-availability lab on Kubernetes (BFM, MiniPG, ProxySQL), documenting and automating the setup.</p>
           <div class="mt-4">
-            <h5 class="fw-bold mb-3">Technologies I work with:</h5>
+            <h5 class="fw-bold mb-3">Technologies I work with</h5>
             <div>
-              <span class="tech-icon"><i class="fab fa-java me-2"></i> Java</span>
-              <span class="tech-icon"><i class="fab fa-python me-2"></i> Python</span>
-              <span class="tech-icon"><i class="fas fa-code me-2"></i> C</span>
-              <span class="tech-icon"><i class="fas fa-database me-2"></i> SQL</span>
-              <span class="tech-icon"><i class="fab fa-html5 me-2"></i> HTML/CSS</span>
-              <span class="tech-icon"><i class="fab fa-js me-2"></i> JavaScript</span>
-              <span class="tech-icon"><i class="fab fa-react me-2"></i> React</span>
-              <span class="tech-icon"><i class="fas fa-server me-2"></i> FastAPI</span>
-              <span class="tech-icon"><i class="fab fa-flask me-2"></i> Flask</span>
-              <span class="tech-icon"><i class="fab fa-git-alt me-2"></i> Git</span>
+              <span class="tech-icon"><i class="fab fa-java"></i> Java / Spring Boot</span>
+              <span class="tech-icon"><i class="fab fa-python"></i> Python / FastAPI</span>
+              <span class="tech-icon"><i class="fa-solid fa-code"></i> Node.js / Express</span>
+              <span class="tech-icon"><i class="fab fa-react"></i> React / Next.js</span>
+              <span class="tech-icon"><i class="fa-solid fa-database"></i> PostgreSQL / MongoDB</span>
+              <span class="tech-icon"><i class="fa-brands fa-docker"></i> Docker / Compose</span>
+              <span class="tech-icon"><i class="fa-solid fa-cloud"></i> Kubernetes (Minikube)</span>
+              <span class="tech-icon"><i class="fa-solid fa-gear"></i> GitHub Actions</span>
+              <span class="tech-icon"><i class="fa-solid fa-network-wired"></i> WebRTC / Socket.io</span>
+              <span class="tech-icon"><i class="fa-brands fa-linux"></i> Linux</span>
             </div>
           </div>
-          
           <div class="mt-5">
             <a href="contact.html" class="btn btn-custom me-3">Contact Me</a>
             <a href="projects.html" class="btn btn-outline-custom">My Projects</a>
@@ -336,23 +140,23 @@
     </div>
   </section>
 
-  <!-- Stats Section -->
+  <!-- STATS -->
   <section class="py-5 bg-light">
     <div class="container py-4">
-      <div class="row">
-        <div class="col-md-3 col-6 mb-4 mb-md-0">
+      <div class="row justify-content-start">
+        <div class="col-md-3 col-6 mb-4">
           <div class="counter-box">
             <div class="counter-number">7+</div>
             <div class="counter-text">Projects Completed</div>
           </div>
         </div>
-        <div class="col-md-3 col-6 mb-4 mb-md-0">
+        <div class="col-md-3 col-6 mb-4">
           <div class="counter-box">
-            <div class="counter-number">4+</div>
+            <div class="counter-number">10+</div>
             <div class="counter-text">Technologies</div>
           </div>
         </div>
-        <div class="col-md-3 col-6 mb-4 mb-md-0">
+        <div class="col-md-3 col-6 mb-4">
           <div class="counter-box">
             <div class="counter-number">1</div>
             <div class="counter-text">Hackathon</div>
@@ -362,11 +166,10 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-5 py-lg-7">
+  <!-- SKILLS -->
+  <section id="skills" class="py-5">
     <div class="container py-4">
       <h2 class="section-title text-center mb-5">My Skills</h2>
-      
       <div class="row">
         <div class="col-md-6 mb-4">
           <div class="card border-0 shadow-sm h-100">
@@ -375,11 +178,10 @@
                 <i class="fas fa-laptop-code fs-3 me-3 text-primary"></i>
                 <h4 class="mb-0">Software Development</h4>
               </div>
-              <p>Proficient in object-oriented programming, web development, and software architecture. Experienced in building robust and scalable applications with modern frameworks.</p>
+              <p>Object-oriented design, clean architecture, RESTful services, and testing. Comfortable across Java/Spring, Python/FastAPI, and Node.js.</p>
             </div>
           </div>
         </div>
-        
         <div class="col-md-6 mb-4">
           <div class="card border-0 shadow-sm h-100">
             <div class="card-body p-4">
@@ -387,11 +189,10 @@
                 <i class="fas fa-brain fs-3 me-3 text-primary"></i>
                 <h4 class="mb-0">Artificial Intelligence</h4>
               </div>
-              <p>Exploring machine learning algorithms, neural networks, and natural language processing. Passionate about implementing AI solutions to solve real-world problems.</p>
+              <p>Classical ML, basic NLP, model serving with FastAPI, and practical feature engineering for small/medium-scale datasets.</p>
             </div>
           </div>
         </div>
-        
         <div class="col-md-6 mb-4">
           <div class="card border-0 shadow-sm h-100">
             <div class="card-body p-4">
@@ -399,11 +200,10 @@
                 <i class="fas fa-lock fs-3 me-3 text-primary"></i>
                 <h4 class="mb-0">Cybersecurity</h4>
               </div>
-              <p>Knowledge of security principles, vulnerability assessment, and secure coding practices. Interested in network security and ethical hacking techniques.</p>
+              <p>Secure coding practices, dependency scanning, and container security basics. Interested in network security and authN/authZ patterns.</p>
             </div>
           </div>
         </div>
-        
         <div class="col-md-6 mb-4">
           <div class="card border-0 shadow-sm h-100">
             <div class="card-body p-4">
@@ -411,7 +211,7 @@
                 <i class="fas fa-chart-bar fs-3 me-3 text-primary"></i>
                 <h4 class="mb-0">Data Science</h4>
               </div>
-              <p>Experience with data analysis, visualization, and statistical methods. Skilled in extracting insights from complex datasets to drive informed decisions.</p>
+              <p>Data wrangling, exploratory analysis, and visualization. SQL-first mindset with PostgreSQL and Pandas for insights.</p>
             </div>
           </div>
         </div>
@@ -419,67 +219,54 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-5" style="background-color: var(--primary-color);">
+  <!-- CTA -->
+  <section class="py-5" style="background:var(--primary-color);">
     <div class="container py-4 text-center">
-      <h2 class="text-white mb-4">Interested in working together?</h2>
-      <p class="text-white-50 mb-4">I'm always open to discussing product design work or partnership opportunities.</p>
+      <h2 class="text-white mb-3">Interested in working together?</h2>
+      <p class="text-white-50 mb-4">Open to backend / DevOps internships and junior roles.</p>
       <a href="contact.html" class="btn btn-light px-4 py-2">Get In Touch</a>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h4 class="mb-4">Elif Konak</h4>
-          <p class="text-white-50">Computer Engineering Student at TED University. Passionate about technology, software development, and AI.</p>
-          <div class="social-icons mt-4">
-            <a href="https://github.com/elifkonak"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/elif-konak-589064265"><i class="fab fa-linkedin"></i></a>
+          <h4 class="mb-3">Elif Konak</h4>
+          <p class="text-white-50">Senior Computer Engineering student at TED University. Passionate about backend, DevOps, and real-time apps.</p>
+          <div class="social-icons mt-3">
+            <a href="https://github.com/elifkk14" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/elif-konakk" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:elif.konak@yahoo.com.tr" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
         <div class="col-lg-6 text-lg-end">
-          <h4 class="mb-4">Quick Links</h4>
-          <div class="mb-2"><a href="index.html#about" class="footer-link">About</a></div>
+          <h4 class="mb-3">Quick Links</h4>
+          <div class="mb-2"><a href="#about" class="footer-link">About</a></div>
           <div class="mb-2"><a href="projects.html" class="footer-link">Projects</a></div>
           <div class="mb-2"><a href="resume.html" class="footer-link">Resume</a></div>
           <div class="mb-2"><a href="blog.html" class="footer-link">Blog</a></div>
           <div><a href="contact.html" class="footer-link">Contact</a></div>
         </div>
       </div>
-      <hr class="my-4 bg-white-50">
-      <p class="text-center text-white-50 mb-0">&copy; 2025 Elif Konak. All rights reserved. | <a href="mailto:elif.konak@yahoo.com.tr" class="footer-link">elif.konak@yahoo.com.tr</a></p>
+      <hr class="my-4" style="opacity:.15">
+      <p class="text-center text-white-50 mb-0">&copy; 2025 Elif Konak. All rights reserved. • <a href="mailto:elif.konak@yahoo.com.tr" class="footer-link">elif.konak@yahoo.com.tr</a></p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Simple animation for the text
-    const texts = ["Computer Engineering Student", "Software Developer", "AI Enthusiast"];
-    let count = 0;
-    let index = 0;
-    let currentText = '';
-    let letter = '';
-    
-    (function type() {
-      if (count === texts.length) {
-        count = 0;
-      }
-      currentText = texts[count];
-      letter = currentText.slice(0, ++index);
-      
+    // Typewriter effect
+    const texts=["Computer Engineering Student","Backend & DevOps","Software Developer","AI Enthusiast"];
+    let count=0,index=0,current='',letter='';
+    (function type(){
+      if(count===texts.length) count=0;
+      current=texts[count];
+      letter=current.slice(0,++index);
       document.querySelector('.animated-text').textContent = letter;
-      
-      if (letter.length === currentText.length) {
-        count++;
-        index = 0;
-        setTimeout(type, 2000);
-      } else {
-        setTimeout(type, 100);
-      }
+      if(letter.length===current.length){count++;index=0;setTimeout(type,1600);} else {setTimeout(type,90);}
     })();
   </script>
 </body>
