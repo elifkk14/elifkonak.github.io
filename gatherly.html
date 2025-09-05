@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gatherly | Elif Konak</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#6c63ff;
+      --dark:#2d2d2d;
+      --muted:#6c757d;
+    }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--dark);background:#fff}
+    .navbar-brand{font-weight:700;color:var(--primary)}
+    .nav-link:hover{color:var(--primary)!important}
+    .section-title{font-weight:800;font-size:2rem;margin:1.25rem 0 1.5rem;position:relative}
+    .section-title::after{content:'';width:56px;height:4px;background:var(--primary);position:absolute;left:0;bottom:-10px;border-radius:2px}
+    .badge-tech{background:#f2f0ff;border:1px solid #e3e0ff;color:#3b2fbf;padding:.35rem .6rem;border-radius:999px;font-weight:600}
+    .hero{background:linear-gradient(180deg, rgba(108,99,255,.06), transparent)}
+    .card{border:1px solid #eee;transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+    .btn-outline-primary{border-color:var(--primary);color:var(--primary)}
+    .btn-outline-primary:hover{background:var(--primary);color:#fff}
+    .carousel-caption{background:rgba(0,0,0,.45);border-radius:.5rem;padding:.5rem .75rem}
+    footer{background:var(--primary);color:#fff}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Elif<span style="color:#f50057">.</span>Konak</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="projects.html">← Back to Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container py-5">
+      <div class="d-flex align-items-center gap-3">
+        <h1 class="section-title mb-0">Gatherly</h1>
+        <span class="badge rounded-pill text-bg-warning">In Development</span>
+      </div>
+      <p class="lead text-muted mt-2">
+        A Discord-like real-time communication app featuring servers/channels, messaging, voice rooms, screen sharing, and presence.
+      </p>
+      <p class="mb-0">
+        <span class="badge-tech me-1">React</span>
+        <span class="badge-tech me-1">Node.js</span>
+        <span class="badge-tech me-1">Socket.io</span>
+        <span class="badge-tech me-1">WebRTC</span>
+        <span class="badge-tech me-1">SimplePeer</span>
+        <span class="badge-tech me-1">MongoDB Atlas</span>
+      </p>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-4">
+      <!-- Left column -->
+      <div class="col-lg-7">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-bullseye me-2"></i>Key Features</h5>
+            <ul class="mb-0">
+              <li>Server & channel system with role/permission management</li>
+              <li>Real-time messaging (Socket.io) with typing indicators</li>
+              <li>Voice rooms & screen sharing (WebRTC + SimplePeer)</li>
+              <li>Presence/online status and basic moderation tools</li>
+              <li>File sharing and message attachments</li>
+              <li>REST API documented with Swagger</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-road me-2"></i>Roadmap</h5>
+            <ol class="mb-0">
+              <li>Messaging & channels (completed – MVP)</li>
+              <li>Voice rooms & screen sharing (prototype)</li>
+              <li>Role/permission model & moderation</li>
+              <li>Notifications & offline message sync</li>
+              <li>Production hardening: Docker, CI/CD, observability</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="col-lg-5">
+        <!-- Screenshots -->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-image me-2"></i>Screenshots</h5>
+
+            <div id="gatherlyCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#gatherlyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#gatherlyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#gatherlyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner rounded border">
+                <div class="carousel-item active">
+                  <img src="images/gatherly1.png" class="d-block w-100" loading="lazy" alt="Gatherly — server and channel list view">
+                  <div class="carousel-caption d-none d-md-block">
+                    
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/gatherly2.png" class="d-block w-100" loading="lazy" alt="Gatherly — real-time chat with typing indicator">
+                  <div class="carousel-caption d-none d-md-block">
+                    
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/gatherly3.png" class="d-block w-100" loading="lazy" alt="Gatherly — voice room and screen sharing">
+                  <div class="carousel-caption d-none d-md-block">
+                 
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#gatherlyCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#gatherlyCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-share-nodes me-2"></i>Contact</h5>
+            <p class="mb-3">Want a demo or more details? Reach out to me.</p>
+            <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/elif-konakk" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin me-1"></i> Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Elif Konak. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
